@@ -1,0 +1,19 @@
+version: '3'
+services:
+  mnist_train:
+    image: mnist_train:latest
+    container_name: mnist_train
+    build: .
+    tty: true
+    volumes:
+      - type: bind
+        source: "./workspace"
+        target: "/workspace"
+    working_dir: "/workspace"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
