@@ -1,7 +1,7 @@
 # Simple-CNN-Example
 
 ## Introduction
-This repository aims at introducing how to train deep leaerning models with Pytorch, 
+This repository aims at introducing how to train deep leaerning classification models with Pytorch, 
 export to onnx and use it with onnxruntime taking MNIST dataset, which is famous for handwriting digit image, as an example.
 Generally, CNN model accepts 3channels(RGB) but MNIST has one channel. To deal with this, Custom MNIST Dataset class returns 3channels tensor inheriting "torchvision.dataset.MNIST" class.
 
